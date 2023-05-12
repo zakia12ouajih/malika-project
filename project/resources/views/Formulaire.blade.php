@@ -246,8 +246,9 @@ footer{
 
  <!-- Button trigger modal -->
 <article>
-  <div class="jj">
-    <button type="button"   class="a"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <div>
+  <div style="margin-top: 50px">
+    <button type="button"    class="a"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       Ajouter un Livre
       </button>
   </div>
@@ -266,6 +267,8 @@ footer{
       <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
       <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
     </table>
+  </div>
+</div>
     
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
