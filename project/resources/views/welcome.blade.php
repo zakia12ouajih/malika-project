@@ -108,6 +108,7 @@ a
 #imageprincipale{
     padding-top: 60px;
     background: url(age8.jpg) no-repeat fixed 50% 50%;
+    z-index: -1;
     background-size: cover;
     height: 799px;
 }
@@ -266,6 +267,8 @@ footer{
 
         </style>
         <body>
+           
+            
         <div class="full-page">
             <div class="navbar" id="titre_principale">
                 <div class="bn" id="logo">

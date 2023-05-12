@@ -8,7 +8,7 @@
   <title>Document</title>
   <!-- Button trigger modal -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-{{-- <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
@@ -79,7 +79,7 @@ nav ul li a:hover
 {
     color: aqua;
 }
-    .ima{
+    /* .ima{
   border: 1px;
   padding-left: 50px;
   margin-top: 20px;
@@ -152,7 +152,7 @@ color: white;
     background-color: #96D4D4;
   } */
 
-  .h{
+  /* .h{
     color: rgb(137, 139, 190);
     margin-left: 150px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -205,7 +205,7 @@ footer{
     margin-bottom: 20px;
     padding:0 10px;
     
-}
+} */ 
     </style>
 </head>
 <body class="body"></body>
@@ -245,69 +245,132 @@ footer{
   </div>
 
  <!-- Button trigger modal -->
-<article>
+<article class="container">
   <div>
-  <div style="margin-top: 50px">
-    <button type="button"    class="a"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <div class="d-flex justify-content-between mt-3">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       Ajouter un Livre
       </button>
+      <button class="btn btn-primary"><a class="nav-link" href="/urr" > Lit Adminstauer</a></button>
+    </div>
+    <div class="mt-4">
+      <div class="table-responsive">
+        <table class="table table-bordered  table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th>Les class</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>Les roman</td>
+            </tr>
+            <tr><td>Arabe</td></tr>
+            <tr><td >Arabe</td></tr>
+            <tr><td>Arabe</td></tr>
+            <tr><td >Arabe</td></tr>
+            <tr><td>Arabe</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
   </div>
-  <a href="/urr" > Lit Adminstauer</a>
-    
-    <table style="border: 2px solid ;width: 60%; height: 70%;" >
-      <tr style="border: 2px solid ;width: 60%"  >
-        <th  tyle="padding:10px;" >Les class</th>
-      </tr>
-      <tr  style="border: 2px solid ;width: 60% ;padding:10px" >
-        <td style="padding:10px">Les roman</td>
-      </tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-    </table>
-  </div>
-</div>
-    
+  
+  
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header" >
-            <h3 class="H3">LES INFORMATION</h3>
+          <div class="modal-header modal-header-sm" >
+            <h5 class="modal-title">LES INFORMATIONs</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
     
   
-          <div class="ima">   
-           <form action="{{Route('url.store')}}" method="POST">
-            @csrf
-            Auteur:
-           <input class="bb" type="text"name="n">                          <br><br>
-           image:
-           <input class="bb" type="text"name="i">                          <br><br>
-           La langue:
-            <input class="cc" type="text"name="l">                          <br><br>
-            Class:
-           <input class="bb" type="text"name="c">                          <br><br>
-           societe:
-            <input  class="dd"type="text"name="s">                      <br><br>
-            Edituer:
-           <input class="bb" type="text"name="r">                          <br><br>
-           Date d'émission: <input class="ee" type="date"name="di">                    <br><br>
-           Les page:
-            <input class="ff" type="text"name="p">             <br><br>
-           Taille de fichier:
-           <input class="gg" type="text"name="v">                <br><br>
-           Type de fichier:
-             <input class="hh" type="text"name="t">                  <br><br>
-           Date crée:
-           <input class="ii"type="date"name="d">
-          <button type="submit" id="btn-print-this "class="btn btn-info "  class="bt">Envoyer</button>
-           </form>
-            </div>
-          </div>
+          <div class="ima"> 
+            
+              <div class="container">
+                <form action="{{Route('url.store')}}" method="POST">  
+                  @csrf              
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Auteur :</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="n" id="inputName" placeholder="Auteur">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">image:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="i" id="inputName" placeholder="image">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">La langue:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="l" id="inputName" placeholder="langue">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Class:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="c" id="inputName" placeholder="Class">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">societe:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="s" id="inputName" placeholder="societe">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Edituer:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="r" id="inputName" placeholder="Edituer">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Date d'émission: </label>
+                      <div class="col-8">
+                        <input type="date" class="form-control form-control-sm" name="di" id="inputName" placeholder="Date d'émission">
+                      </div>
+                    </div>
+                  
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Les page:</label>
+                      <div class="col-8">
+                        <input type="number" class="form-control form-control-sm" name="p" id="inputName" placeholder="page">
+                      </div>
+                    </div>
+                  
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Taille de fichier:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="v" id="inputName" placeholder="Taille de fichier">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Type de fichier:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="t" id="inputName" placeholder="type de fichier">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Date crée:</label>
+                      <div class="col-8">
+                        <input type="date" class="form-control form-control-sm" name="d" id="inputName" placeholder="Date crée">
+                      </div>
+                    </div>
+                  
+                  <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                    <div class="offset-sm-4 col-sm-8">
+                      <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            
+            </div>  
         </div>
       </div>
     </div>
