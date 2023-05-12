@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\BoockController;
+use App\Http\Controllers\user;
+use App\Models\boock;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/create', [BoockController::class, 'create'])->name('home');
+
+
+
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('url',BoockController::class);
+//Route::resource('url',user::class);
+Route::get('/urr', [user::class,'index']);
+
+Route::prefix('admin')->middleware(['auth','isAdmins'])->group(function(){
+    Route::resource('url',BoockController::class);
+       
+});
+
+// Route::resource('url1',BoockController::class);
