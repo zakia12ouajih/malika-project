@@ -215,7 +215,7 @@ footer{
           <img src="images/fond_jaune.png"  width="50px" height="50px" alt="#">
       </div>
       <Div>
-          <a href='#'style=" font-family : 'Dancing Script', cursive ; font-size : 50px ;">MB</a>
+          <a href='#'style=" font-family : 'Dancing Script', cursive ; font-size : 50px ;">ZH</a>
       </div>
 
       <nav>
@@ -246,14 +246,12 @@ footer{
 
  <!-- Button trigger modal -->
 <article>
-  <div>
-  <div style="margin-top: 50px">
+  <div style="margin-top: 90px;margin-left:1070px">
     <button type="button"    class="a"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       Ajouter un Livre
       </button>
   </div>
   <a href="/urr" > Lit Adminstauer</a>
-    
     <table style="border: 2px solid ;width: 60%; height: 70%;" >
       <tr style="border: 2px solid ;width: 60%"  >
         <th  tyle="padding:10px;" >Les class</th>
@@ -268,7 +266,7 @@ footer{
       <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
     </table>
   </div>
-</div>
+
     
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -286,7 +284,7 @@ footer{
             Auteur:
            <input class="bb" type="text"name="n">                          <br><br>
            image:
-           <input class="bb" type="text"name="i">                          <br><br>
+           <input class="bb" type="file" name="i">                          <br><br>
            La langue:
             <input class="cc" type="text"name="l">                          <br><br>
             Class:

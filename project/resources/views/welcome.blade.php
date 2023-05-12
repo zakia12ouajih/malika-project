@@ -320,123 +320,48 @@ footer{
         <article style="background-color: beige">
             <div class="row">
                 @foreach ($cr as $s )
-                <p>{{$s->nom}}</p>
-                    
-                @endforeach
                 <div class="col-sm-3" >
                     <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo2.jpg" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
+                        <p><a href="{{route("url.index",['id'=>$s->id])}}"><img src="{{asset("image/".$s->image)}}"></a></p>
+                        <p>{{$s->nom}}</p>
+                        <div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Les information
+                          </button>
+                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">LES INFORMATION</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="img">
+                                  <img src="51961637.jpg" alt="DFG"   width="150px" height="200px"style="border: 2px solid  black;">
+                                </div>
+                                  <div class="aa">
+                                    TITRE                          <br><br>
+                                 Auteur:                           <br><br>
+                                 La langue:                          <br><br>
+                                 Editeur:                            <br><br>
+                                 Date d'émission:                    <br><br>
+                                 Les page:                           <br><br>
+                                 Taille de fichier:                  <br><br>
+                                 Type de fichier:                    <br><br>
+                                 Date crée:
+                                </div>
+                              </div>
+                                <div class="modal-footer">
+                                  <button type="button" id="btn-print-this "class="btn btn-success " >Téléchargé Le Livre</button>
+                                  <button type="button" class="btn btn-primary">Lis Le Livre</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>     
                     </div>
                 </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo8.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo7.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px" >
-                        <img src="images/photo6.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo5.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px"  >
-                        <img src="images/photo10.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px" >
-                        <img src="images/phtoto3.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo4.jpg" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>   
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px" >
-                        <img src="images/photo2.jpg" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo8.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo7.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo6.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo5.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/photo10.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px">
-                        <img src="images/phtoto3.webp" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>
-                <div class="col-sm-3"   >
-                    <div class="border" style="margin-left:15px;margin-right: 15px" >
-                        <img src="images/photo4.jpg" height="220px" style="padding-bottom: 30px" >
-                        <p>malika id mohamed</p>
-                        <p>Les information</p>
-                    </div>
-                </div>        
-            </div>
-    
+                @endforeach    
         </article><br>
         <footer>
             <div id="deuxieme trait"></div>

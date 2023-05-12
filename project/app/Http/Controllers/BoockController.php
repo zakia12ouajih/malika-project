@@ -12,7 +12,7 @@ class BoockController extends Controller
      */
     public function index()
     {
-        //
+        
         $cr=boock::all();
         return view("welcome",compact("cr"));
     }
@@ -31,8 +31,12 @@ class BoockController extends Controller
      */
     public function store(Request $request)
     {
+        $n=$request->pa->getClientOriginalExtension();
+        $mn=time().".".$n;
+        $path="image";
+        $request->pa->move($path,$mn);
         boock::create([
-            "image"=>$request->i,
+            "image"=>$mn,
             "nom"=>$request->n,
             "class"=>$request->c,
             "longage"=>$request->l,
