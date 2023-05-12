@@ -1,21 +1,44 @@
 .image-container {
    position: relative;
    background-image: url('../image/photo.jpg');
-   /* filter: brightness(70%); */
+   /* filter: brightness(70%) contrast(90%); */
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
    background-size: 100% auto;
+   /* filter: brightness(70%); */
    /* display: flex; */
    /* justify-content: end; */
    /* align-items: center; */
    /* background-color: red; */
    height: 100vh;
-   z-index: index -1;
+   /* z-index: index -1; */
+}
+.navbar{
+   position: relative;
+   background-color: rgba(0, 0, 0, 0.5);
 }
 .content{
-   position: relative;
-   z-index: 1;
-   padding: 20px;
-   color: #ffffff;
+   height: 88vh;
+   background-color: rgba(0, 0, 0, 0.3);
+}
+h1 {
+   font-family: 'Dancing Script', cursive;
+   text-align: center;
+   color: white;
+   font-size: 4cm;
+   text-shadow: 10px 10px 8px rgba(50, 245, 255, 0.5);
+}
+h3 {
+   text-align: center;
+   color: skyblue;
+   font-size: 3cm;
+   text-shadow: 1px 3px 2px black;
+}
+footer{
+   height: 30vh;
+   background-color: rgba(0, 0, 0, 0.3);
+}
+.footerLink{
+   font-size: 20px;
 }
