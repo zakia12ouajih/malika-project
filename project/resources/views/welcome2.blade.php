@@ -29,24 +29,37 @@
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                        
                         <div class="collapse  navbar-collapse" id="collapsibleNavId">
                             <ul class="nav navbar-nav w-100 justify-content-end me-auto mt-2 mt-lg-0">
-                                
-                                
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="/">Home</a>
+                                    <a class="nav-link text-white" href="/home">HOME</a>
                                 </li>
                                 <li class="nav-item">
-                                    @if (Route::has('login'))
- 
-                                    <a class="nav-link text-white" href="{{ route('login') }}">Log in</a>
-                                    @endif
+                                    <a class="nav-link text-white" href="/admin/aff">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                        @if (Route::has('register'))
-                                            <a class="nav-link text-white" href="{{ route('register') }}" >Register</a>
+                                    @guest
+                                        @if (Route::has('login'))
+                                        <h5>    
+                                            <a class="nav-link " href="{{ route('login') }}"></a>
+                                        </h5>
                                         @endif
-                                    
+                                    @else
+                                        <li class="nav-item ">
+                                        <div id="demox" >
+                                            
+                                                <h5>
+                                                    <a class="nav-link text-white text-center" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                        logout
+                                                    </a>
+                                                </h5>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class=" d-none">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                        </li>
+                                    @endguest 
                                     
                                 </li>
                             </ul>

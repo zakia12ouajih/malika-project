@@ -18,27 +18,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/create', [BoockController::class, 'create'])->name('home');
+// Route::get('/create', [BoockController::class, 'create']);
 
 
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('url',BoockController::class);
-//Route::resource('url',user::class);
-Route::get('/urr', [user::class,'index']);
 
-Route::prefix('admin')->middleware(['auth','isAdmins'])->group(function(){
-    Route::resource('url',BoockController::class);
+// Route::get('/urr', [user::class,'index']);
+
+Route::prefix('admin')->middleware('auth')->group(function(){
+    Route::controller(BoockController::class)->group(function () {
+        Route::get('/homeAdmin', 'index');
+        Route::get('/aff','create');
+        Route::post('/ajouter', 'store');
+        Route::get('/afficherUsers','afficher')->name('users');
+        Route::get('/edit{id}', 'edit');
+        Route::put('/modiUser/{id}', 'modifier');
+    });
+    // Route::get('/homeAdmin', [BoockController::class, 'index']);
 
     Route::get('/t',[BoockController::class,'afficher'])->name("aff");
     Route::get('d/{id}',[BoockController::class,'edit']);
-Route::put('m/{id}',[BoockController::class,'modifier'])->name("mod");
-Route::delete('s/{id}',[BoockController::class,'supprimer'])->name("test.supprimer");
+    Route::put('m/{id}',[BoockController::class,'modifier'])->name("mod");
+    Route::delete('s/{id}',[BoockController::class,'supprimer'])->name("test.supprimer");
 
-       
 });
 
 // Route::resource('url1',BoockController::class);

@@ -128,23 +128,20 @@ button:hover{
  </head>
  <body >
 <div class="container">
+    
     <input type="checkbox" id="check">
         <div class="login form">
-            <header>Register</header>
-                    <form method="POST" action="{{ route('register') }}">
+            <header>Modifier</header>
+                    <form action='{{ URL('/admin/modiUser',$md->id) }}' method="POST">
                         @csrf
-
+                        @method('put')
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control " name="name" value={{ $md->name }} required autocomplete="name" autofocus>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+    
                             </div>
                         </div>
 
@@ -152,13 +149,9 @@ button:hover{
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control " name="email" value={{ $md->email }} required autocomplete="email">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                
                             </div>
                         </div>
 
@@ -187,13 +180,11 @@ button:hover{
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Modifier') }}
                                 </button>
                             </div>
                         </div>
-                        <div class="row mb-3 dont_have_acc">
-                            Don't have an account <a href="{{ route('login') }}">Log in</a>
-                        </div>
+                        
                     </form>
                 </div>
             </div>

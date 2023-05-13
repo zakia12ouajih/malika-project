@@ -13,110 +13,55 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-<style>
-  *
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.full-page
-{
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-}
-.navbar
-{
-    display: flex;
-    background-color:rgb(129, 193, 241);
-    align-items: center;
-    padding: 20px;
-    padding-left: 50px;
-    padding-right: 30px;
-    padding-top: 50px;
-}
 
-nav
-{
-    flex: 1;
-    text-align: right;
-}
-nav ul
-{
-    display: inline-block;
-    list-style: none;
-}
-nav ul li
-{
-    display: inline-block;
-    margin-right: 70px;
-}
-nav ul li a
-{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    font-family: sans-serif;
-}
-nav ul li button
-{
-    font-size: 20px;
-    color: white;
-    outline: none;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-family: sans-serif;
-}
-nav ul li button:hover
-{
-    color: aqua;
-}
-nav ul li a:hover
-{
-    color: aqua;
-}
-
-    </style>
 </head>
 <body class="body"></body>
 <div class="">
-  <div  class="navbar bg-info">
-      <div class="bn">
-          <img src="images/fond_jaune.png"  width="50px" height="50px" alt="#">
-      </div>
-      <Div>
-          <a href='#'style=" font-family : 'Dancing Script', cursive ; font-size : 50px ;">ZH</a>
-      </div>
-
-      <nav>
-          <ul id='MenuItems'>
-              <li><a href='/url'>Home</a></li>
-              <li><a href='/create'>Services</a></li>
-              <li><div>
-                  @if (Route::has('login'))
-                      <div >
-                          @auth
-                              <a href="{{ url('/home') }}" >Home</a>
-                          @else
-                              <a href="{{ route('login') }}">Log in</a>
-                      </li><li>
-                              @if (Route::has('register'))
-                                  <a href="{{ route('register') }}" >Register</a>
-                              @endif
-                          @endauth
+  <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <div class="container">
+          <a class="navbar-brand text-white" href="#"><img src="images/zozor_logo.png"  width="50px" height="50px" alt="#">ZH</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse  navbar-collapse" id="collapsibleNavId">
+              <ul class="nav navbar-nav w-100 justify-content-end me-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="/home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="/admin/aff">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      @guest
+                          @if (Route::has('login'))
+                          <h5>    
+                              <a class="nav-link " href="{{ route('login') }}"></a>
+                          </h5>
+                          @endif
+                      @else
+                          <li class="nav-item ">
+                          <div id="demox" >
+                              
+                                  <h5>
+                                      <a class="nav-link text-white text-center" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                          logout
+                                      </a>
+                                  </h5>
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" class=" d-none">
+                                  @csrf
+                              </form>
+                          </div>
                           </li>
-                      </div>
-                  @endif
-              </div></li>
+                      @endguest 
+                      
+                  </li>
+              </ul>
               
-          </ul>
-      </nav>
-
-  </div>
+          </div>
+      </div>
+  </nav>
 
  <!-- Button trigger modal -->
 <article class="container">
@@ -125,7 +70,7 @@ nav ul li a:hover
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       Ajouter un Livre
       </button>
-      <button class="btn btn-primary"><a class="nav-link" href="/urr" > Lit Adminstauer</a></button>
+      <button class="btn btn-primary"><a class="nav-link" href="/admin/afficherUsers" > Les Administrateurs</a></button>
     </div>
     <div class="mt-4">
       <div class="table-responsive">
@@ -165,7 +110,7 @@ nav ul li a:hover
           <div class="ima"> 
             
               <div class="container">
-                <form action="{{Route('url.store')}}" method="POST">  
+                <form action="/admin/ajouter" method="POST">  
                   @csrf              
                     <div class="mb-2  container d-flex align-items-center justify-content-center row">
                       <label for="inputName" class="col-3 col-form-label">Auteur :</label>

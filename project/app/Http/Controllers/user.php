@@ -30,6 +30,9 @@ class user extends Controller
      */
     public function store(Request $request)
     {
+        
+
+        return redirect()->route('viewAdminUser')->with('success', '');
         ModelsUser::create([
             "password_confirmation_at"=>$request->password_confirmation,
             "password"=>$request->password,

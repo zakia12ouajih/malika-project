@@ -14,241 +14,68 @@
 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-<style>
-  *
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.full-page
-{
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-}
-.navbar
-{
-    display: flex;
-    background-color:rgba(0,0,0,0.3);
-    align-items: center;
-    padding: 20px;
-    padding-left: 50px;
-    padding-right: 30px;
-    padding-top: 50px;
-}
 
-nav
-{
-    flex: 1;
-    text-align: right;
-}
-nav ul
-{
-    display: inline-block;
-    list-style: none;
-}
-nav ul li
-{
-    display: inline-block;
-    margin-right: 70px;
-}
-nav ul li a
-{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    font-family: sans-serif;
-}
-nav ul li button
-{
-    font-size: 20px;
-    color: white;
-    outline: none;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-family: sans-serif;
-}
-nav ul li button:hover
-{
-    color: aqua;
-}
-nav ul li a:hover
-{
-    color: aqua;
-}
-    .ima{
-  border: 1px;
-  padding-left: 50px;
-  margin-top: 20px;
-  font-family:
-}
-.aw{
-  background-color: rgb(156, 154, 154);
-}
-
-.bb{
-  margin-left: 80px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.cc{
-  margin-left: 60px;
-  border-radius: 20px;
-  padding-left: 30px
-
-}
-
-.dd{
-  margin-left: 80px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.ee{
-  margin-left:20px;
-  border-radius: 20px;
-  padding-left: 80px
-}
-.ff{
-  margin-left: 70px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.gg{
-  margin-left: 30px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.hh{
-  margin-left: 30px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.ii{
-  margin-left: 70px;
-  border-radius: 20px;
-  padding-left: 80px
-}
-
-.btn{
-  margin-left: 150px;
-  background-color:dodgerblue;
-margin-top: 40px;
-margin-bottom: 40px;
-color: white;
-
-
-}
-
-  table{
-    margin-left:300px;
-  }
-  table, th, td {
-   
-  margin:20px;
-
-  }
-  
-
-  .h{
-    color: rgb(137, 139, 190);
-    margin-left: 150px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-  }
-.topnav .search-container {
-  float: right;
-  margin-right: 150px;
-
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-
-
-}
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-color: rgb(171, 167, 167);
-  font-size: 17px;
-  border: 1px solid black;
-  cursor: pointer;
-  width: 30px;
-  height: 40px;
-}
-footer{
-    background-color: salmon;
-    color: snow;
-    padding: 10px 0 10px 0;
-
-}
-.H3{
-  margin-left:100px ;
-  color: rgb(82, 173, 238)
-
-}
-#copyrightEtcons{
-    display: flex;
-    margin-bottom: 20px;
-    padding:0 10px;
-
-}
-    </style>
 
 
 
 
 
 </head>
-<body class="body"></body>
+<body class="body">
+  <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <div class="container">
+          <a class="navbar-brand text-white" href="#"><img src="images/zozor_logo.png"  width="50px" height="50px" alt="#">ZH</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse  navbar-collapse" id="collapsibleNavId">
+              <ul class="nav navbar-nav w-100 justify-content-end me-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="/home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="/admin/aff">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      @guest
+                          @if (Route::has('login'))
+                          <h5>    
+                              <a class="nav-link " href="{{ route('login') }}"></a>
+                          </h5>
+                          @endif
+                      @else
+                          <li class="nav-item ">
+                          <div id="demox" >
+                              
+                                  <h5>
+                                      <a class="nav-link text-white text-center" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                          logout
+                                      </a>
+                                  </h5>
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" class=" d-none">
+                                  @csrf
+                              </form>
+                          </div>
+                          </li>
+                      @endguest 
+                      
+                  </li>
+              </ul>
+              
+          </div>
+      </div>
+  </nav>
 <div  >
-  <div class="navbar bg-info">
-    <div class="bn">
-        <img src="images/fond_jaune.png"  width="50px" height="50px" alt="#">
-    </div>
-    <Div>
-        <a href='#'style=" font-family : 'Dancing Script', cursive ; font-size : 50px ;">ZH</a>
-    </div>
-
-    <nav>
-        <ul id='MenuItems'>
-            <li><a href='/url'>Home</a></li>
-            <li><a href='/create'>Services</a></li>
-            <li><div>
-                @if (Route::has('login'))
-                    <div >
-                        @auth
-                            <a href="{{ url('/home') }}" >Home</a>
-                        @else
-                            <a href="{{ route('login') }}">Log in</a>
-                    </li><li>
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}" >Register</a>
-                            @endif
-                        @endauth
-                        </li>
-                    </div>
-                @endif
-            </div></li>
-            
-        </ul>
-    </nav>
+  
 
   </div>
 <article>
   
     
     <div  class="container">
-    <table class="table table-bordered  table-hover mt-5">
+    <table class="table table-bordered text-center table-hover mt-5">
       
         <thead>
           <tr class="table-primary">
@@ -256,27 +83,29 @@ footer{
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Password</th>
+            <th scope="col">modifier</th>
+            <th scope="col">supprimer</th>
           </tr>
         </thead>
         <tbody>
-          @foreach ($c as $s)
+          @foreach ($cr as $s)
           <tr>
             <td>{{ $s->id }}</td>
             <td>{{ $s->name }}</td>
             <td>{{ $s->email }}</td>
             <td>{{ $s->password }}</td>
-            <td>
-              <div class="l1">
-                <a href="{{ url('admin/d', $s->id)}}"><button class="green">Modifier</button></a>
-                <form class="z1"action="{{route('test.supprimer',['id'=>$s->id])}}"method="POST"
-                  onsubmit="return cinfirm('vous etes sure que vous vouler supprimer ')">
-                  @csrf
-                  @method("DELETE")
-                  <button  type="submit"class="red">Modifier</button>
-                </form>
-              </div></td>
-          </tr>
+            <td><a href="/admin/edit{{ $s->id }}">
+                <button class='btn btn-primary'>modifier
+                </button>
+            </a></td>
+            <td><button class="btn btn-danger">supprimer</button></td>
+            {{-- <td>
+                <a href="{{ url('admin/d', $s->id)}}"><button class="btn btn-primary">Modifier</button></a>
+            </td>
+            <tr><button class="btn btn-danger">supprimer</button></tr>
+          </tr> --}}
         </tbody>
+        
         @endforeach
       </table>
     </div>
