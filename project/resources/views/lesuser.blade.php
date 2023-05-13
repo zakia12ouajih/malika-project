@@ -144,16 +144,14 @@ color: white;
 }
 
   table{
-    margin-left: 150px;
+    margin-left:300px;
   }
   table, th, td {
-    border: 1px solid white;
-    border-collapse: collapse;
+   
+  margin:20px;
 
   }
-  th, td {
-    background-color: #96D4D4;
-  }
+  
 
   .h{
     color: rgb(137, 139, 190);
@@ -212,57 +210,48 @@ footer{
 
 </head>
 <body class="body"></body>
-<div class="">
-  <div class="navbar">
-      <div class="bn">
-          <img src="images/fond_jaune.png"  width="50px" height="50px" alt="#">
-      </div>
-      <Div>
-          <a href='#'style=" font-family : 'Dancing Script', cursive ; font-size : 50px ;">MB</a>
-      </div>
+<div  >
+  <div class="navbar bg-info">
+    <div class="bn">
+        <img src="images/fond_jaune.png"  width="50px" height="50px" alt="#">
+    </div>
+    <Div>
+        <a href='#'style=" font-family : 'Dancing Script', cursive ; font-size : 50px ;">ZH</a>
+    </div>
 
-      <nav>
-          <ul id='MenuItems'>
-              <li><a href='/'>Home</a></li>
-              <li><a href='/create'>Services</a></li>
-              <li><div>
-                  @if (Route::has('login'))
-                      <div >
-                          @auth
-                              <a href="{{ url('/home') }}" >Home</a>
-                          @else
-                              <a href="{{ route('login') }}">Log in</a>
-                      </li><li>
-                              @if (Route::has('register'))
-                                  <a href="{{ route('register') }}" >Register</a>
-                              @endif
-                          @endauth
-                          </li>
-                      </div>
-                  @endif
-              </div></li>
-              
-          </ul>
-      </nav>
+    <nav>
+        <ul id='MenuItems'>
+            <li><a href='/url'>Home</a></li>
+            <li><a href='/create'>Services</a></li>
+            <li><div>
+                @if (Route::has('login'))
+                    <div >
+                        @auth
+                            <a href="{{ url('/home') }}" >Home</a>
+                        @else
+                            <a href="{{ route('login') }}">Log in</a>
+                    </li><li>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" >Register</a>
+                            @endif
+                        @endauth
+                        </li>
+                    </div>
+                @endif
+            </div></li>
+            
+        </ul>
+    </nav>
 
   </div>
 <article>
-  <button type="button"    class="a"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Ajouter un Livre
-    </button>
-    <div class="topnav">
+  
     
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-    </div><br>
-    <table class="table">
+    <div  class="container">
+    <table class="table table-bordered  table-hover mt-5">
       
         <thead>
-          <tr>
+          <tr class="table-primary">
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
@@ -280,6 +269,7 @@ footer{
         </tbody>
         @endforeach
       </table>
+    </div>
 </article>
 </body>
 </html>

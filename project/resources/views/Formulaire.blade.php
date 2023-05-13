@@ -8,7 +8,7 @@
   <title>Document</title>
   <!-- Button trigger modal -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-{{-- <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
@@ -79,138 +79,12 @@ nav ul li a:hover
 {
     color: aqua;
 }
-    .ima{
-  border: 1px;
-  padding-left: 50px;
-  margin-top: 20px;
-  font-family:
-}
-.aw{
-  background-color: rgb(156, 154, 154);
-}
 
-.bb{
-  margin-left: 80px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.cc{
-  margin-left: 60px;
-  border-radius: 20px;
-  padding-left: 30px
-
-}
-
-.dd{
-  margin-left: 80px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.ee{
-  margin-left:20px;
-  border-radius: 20px;
-  padding-left: 80px
-}
-.ff{
-  margin-left: 70px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.gg{
-  margin-left: 30px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.hh{
-  margin-left: 30px;
-  border-radius: 20px;
-  padding-left: 30px
-}
-.ii{
-  margin-left: 70px;
-  border-radius: 20px;
-  padding-left: 80px
-}
-
-.btn{
-  margin-left: 150px;
-  background-color:dodgerblue;
-margin-top: 40px;
-margin-bottom: 40px;
-color: white;
-
-
-}
-
-  table{
-    margin-left: 300px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-  
-  /* th, td {
-    background-color: #96D4D4;
-  } */
-
-  .h{
-    color: rgb(137, 139, 190);
-    margin-left: 150px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-  }
-.topnav .search-container {
-  float: right;
-  margin-right: 150px;
-
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-
-
-}
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-color: rgb(171, 167, 167);
-  font-size: 17px;
-  border: 1px solid black;
-  cursor: pointer;
-  width: 30px;
-  height: 40px;
-}
-footer{
-    background-color: rgb(34, 34, 61);
-    color: snow;
-    padding: 10px 0 10px 0;
-
-}
-.H3{
-  margin-left:100px ;
-  color: rgb(82, 173, 238)
-
-}
-.jj{
-  margin-left:70%;
-  margin-bottom:60px;
-
-}
-#copyrightEtcons{
-    display: flex;
-    margin-bottom: 20px;
-    padding:0 10px;
-    
-}
     </style>
 </head>
 <body class="body"></body>
 <div class="">
-  <div class="navbar">
+  <div  class="navbar bg-info">
       <div class="bn">
           <img src="images/fond_jaune.png"  width="50px" height="50px" alt="#">
       </div>
@@ -245,67 +119,132 @@ footer{
   </div>
 
  <!-- Button trigger modal -->
-<article>
-  <div style="margin-top: 90px;margin-left:1070px">
-    <button type="button"    class="a"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<article class="container">
+  <div>
+    <div class="d-flex justify-content-between mt-3">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       Ajouter un Livre
       </button>
+      <button class="btn btn-primary"><a class="nav-link" href="/urr" > Lit Adminstauer</a></button>
+    </div>
+    <div class="mt-4">
+      <div class="table-responsive">
+        <table class="table table-bordered  table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th>Les class</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>Les roman</td>
+            </tr>
+            <tr><td>Arabe</td></tr>
+            <tr><td >Arabe</td></tr>
+            <tr><td>Arabe</td></tr>
+            <tr><td >Arabe</td></tr>
+            <tr><td>Arabe</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
   </div>
-  <a href="/urr" > Lit Adminstauer</a>
-    <table style="border: 2px solid ;width: 60%; height: 70%;" >
-      <tr style="border: 2px solid ;width: 60%"  >
-        <th  tyle="padding:10px;" >Les class</th>
-      </tr>
-      <tr  style="border: 2px solid ;width: 60% ;padding:10px" >
-        <td style="padding:10px">Les roman</td>
-      </tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-      <tr  style="border: 2px solid ;width: 60%" ><td style="padding:10px">Arabe</td></tr>
-    </table>
-  </div>
-
-    
+  
+  
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header" >
-            <h3 class="H3">LES INFORMATION</h3>
+          <div class="modal-header modal-header-sm" >
+            <h5 class="modal-title">LES INFORMATIONs</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
     
   
-          <div class="ima">   
-           <form action="{{Route('url.store')}}" method="POST">
-            @csrf
-            Auteur:
-           <input class="bb" type="text"name="n">                          <br><br>
-           image:
-           <input class="bb" type="file" name="i">                          <br><br>
-           La langue:
-            <input class="cc" type="text"name="l">                          <br><br>
-            Class:
-           <input class="bb" type="text"name="c">                          <br><br>
-           societe:
-            <input  class="dd"type="text"name="s">                      <br><br>
-            Edituer:
-           <input class="bb" type="text"name="r">                          <br><br>
-           Date d'émission: <input class="ee" type="date"name="di">                    <br><br>
-           Les page:
-            <input class="ff" type="text"name="p">             <br><br>
-           Taille de fichier:
-           <input class="gg" type="text"name="v">                <br><br>
-           Type de fichier:
-             <input class="hh" type="text"name="t">                  <br><br>
-           Date crée:
-           <input class="ii"type="date"name="d">
-          <button type="submit" id="btn-print-this "class="btn btn-info "  class="bt">Envoyer</button>
-           </form>
-            </div>
-          </div>
+          <div class="ima"> 
+            
+              <div class="container">
+                <form action="{{Route('url.store')}}" method="POST">  
+                  @csrf              
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Auteur :</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="n" id="inputName" placeholder="Auteur">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">image:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="i" id="inputName" placeholder="image">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">La langue:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="l" id="inputName" placeholder="langue">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Class:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="c" id="inputName" placeholder="Class">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">societe:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="s" id="inputName" placeholder="societe">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Edituer:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="r" id="inputName" placeholder="Edituer">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Date d'émission: </label>
+                      <div class="col-8">
+                        <input type="date" class="form-control form-control-sm" name="di" id="inputName" placeholder="Date d'émission">
+                      </div>
+                    </div>
+                  
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Les page:</label>
+                      <div class="col-8">
+                        <input type="number" class="form-control form-control-sm" name="p" id="inputName" placeholder="page">
+                      </div>
+                    </div>
+                  
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Taille de fichier:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="v" id="inputName" placeholder="Taille de fichier">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Type de fichier:</label>
+                      <div class="col-8">
+                        <input type="text" class="form-control form-control-sm" name="t" id="inputName" placeholder="type de fichier">
+                      </div>
+                    </div>
+                    <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                      <label for="inputName" class="col-3 col-form-label">Date crée:</label>
+                      <div class="col-8">
+                        <input type="date" class="form-control form-control-sm" name="d" id="inputName" placeholder="Date crée">
+                      </div>
+                    </div>
+                  
+                  <div class="mb-2  container d-flex align-items-center justify-content-center row">
+                    <div class="offset-sm-4 col-sm-8">
+                      <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            
+            </div>  
         </div>
       </div>
     </div>
