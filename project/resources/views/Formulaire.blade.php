@@ -121,7 +121,7 @@
                     <div class="mb-2  container d-flex align-items-center justify-content-center row">
                       <label for="inputName" class="col-3 col-form-label">image:</label>
                       <div class="col-8">
-                        <input type="text" class="form-control form-control-sm" name="i" id="inputName" placeholder="image">
+                        <input type="file" class="form-control form-control-sm" name="i" id="inputName" placeholder="image">
                       </div>
                     </div>
                     <div class="mb-2  container d-flex align-items-center justify-content-center row">

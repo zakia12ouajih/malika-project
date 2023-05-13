@@ -73,9 +73,9 @@
                 </div>
             </div>
             <div class="container">
-                <div class="col-10 mt-5 mb-5 d-flex justify-content-center">
-                    <form class="d-flex my-2">
-                        <input class="form-control " type="text" placeholder="Search">
+                <div class=" mt-5 mb-5 d-flex justify-content-center align-items-center">
+                    <form class="col-7  d-flex justify-content-center align-items-center my-2">
+                        <input class="form-control  " type="text" placeholder="Search">
                         <button class="btn btn-outline-success " type="submit">Search</button>
                     </form>
                 </div>
