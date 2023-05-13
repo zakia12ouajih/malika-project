@@ -29,6 +29,16 @@ h1 {
    font-size: 4cm;
    text-shadow: 10px 10px 8px rgba(50, 245, 255, 0.5);
 }
+.a{
+   text-align: center;
+   font-family: Georgia, 'Times New Roman', Times, serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 40px;
+}
+.B{
+   text-align: center;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 20px;
+}
 h3 {
    text-align: center;
    color: skyblue;

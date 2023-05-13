@@ -70,8 +70,8 @@
                     </form>
                 </div>
                 <div>
-                    <h2 class=" display-5">Unique place for Unique reading </h2>
-                    <p>Recusandae voluptates atque ratione accusantium quae,  dolorum provident et dignissimos deleniti impedit exercitationem mollitia asperiores. Architecto deleniti tenetur harum possimus odio consequuntur, dicta, perspiciatis quisquam voluptas maiores nemo nam. Voluptate non labore ratione corporis et neque, praesentium aliquid maiores maxime repellat beatae earum! Id vel maiores totam eum, adipisci aut veniam omnis quas harum, minima, sunt quae excepturi nulla!</p>
+                    <h2 class="a">Unique place for Unique reading </h2>
+                    <p class="B">Recusandae voluptates atque ratione accusantium quae,  dolorum provident et dignissimos deleniti impedit exercitationem mollitia asperiores. Architecto deleniti tenetur harum possimus odio consequuntur, dicta, perspiciatis quisquam voluptas maiores nemo nam. Voluptate non labore ratione corporis et neque, praesentium aliquid maiores maxime repellat beatae earum! Id vel maiores totam eum, adipisci aut veniam omnis quas harum, minima, sunt quae excepturi nulla!</p>
                 </div>
             </div>
             <div class="container">

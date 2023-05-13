@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\boock;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BoockController extends Controller
 {
@@ -15,6 +16,27 @@ class BoockController extends Controller
         
         $cr=boock::all();
         return view("welcome",compact("cr"));
+    }
+    public function afficher(){
+        $cr = DB::table("lesuser")->get();
+        return view("",compact("cr"));
+    }
+    public function edit ($id){
+        $md =DB::table("lesuser")->where("id",$id)->first();
+        return view("modifier",compact("md"));
+    }
+    public function modifier(Request $request,$id){
+       DB::table("lesuser")->where("id",$id)->update([
+      "id"=>$request->i,
+           " name" =>$request->n,
+            "email" =>$request->e,
+            "password"=>$request->p,
+       ]);
+       return redirect()->Route("aff");
+    }
+    public function supprimer($id){
+        DB::table("users")->where("id",$id)->delete();
+        return redirect()->Route("aff");
     }
 
     /**
@@ -59,6 +81,7 @@ class BoockController extends Controller
     {
         return view('test');
     }
+
 
     /**
      * Show the form for editing the specified resource.

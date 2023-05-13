@@ -265,6 +265,16 @@ footer{
             <td>{{ $s->name }}</td>
             <td>{{ $s->email }}</td>
             <td>{{ $s->password }}</td>
+            <td>
+              <div class="l1">
+                <a href="{{ url('admin/d', $s->id)}}"><button class="green">Modifier</button></a>
+                <form class="z1"action="{{route('test.supprimer',['id'=>$s->id])}}"method="POST"
+                  onsubmit="return cinfirm('vous etes sure que vous vouler supprimer ')">
+                  @csrf
+                  @method("DELETE")
+                  <button  type="submit"class="red">Modifier</button>
+                </form>
+              </div></td>
           </tr>
         </tbody>
         @endforeach

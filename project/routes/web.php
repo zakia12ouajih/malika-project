@@ -32,6 +32,12 @@ Route::get('/urr', [user::class,'index']);
 
 Route::prefix('admin')->middleware(['auth','isAdmins'])->group(function(){
     Route::resource('url',BoockController::class);
+
+    Route::get('/t',[BoockController::class,'afficher'])->name("aff");
+    Route::get('d/{id}',[BoockController::class,'edit']);
+Route::put('m/{id}',[BoockController::class,'modifier'])->name("mod");
+Route::delete('s/{id}',[BoockController::class,'supprimer'])->name("test.supprimer");
+
        
 });
 

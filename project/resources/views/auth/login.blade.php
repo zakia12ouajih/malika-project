@@ -19,7 +19,7 @@
 body{
   height: 100vh;
   /* width: 100%; */
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgb(252, 255, 57)),url(../image/lo.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgb(239, 245, 248)),url(../image/lo.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -30,10 +30,10 @@ body{
   transform: translate(-50%,-50%);
   max-width: 430px;
   width: 100%;
-  background: #cccccc;
+  background: rgb(148, 152, 211);
   opacity: 80%;
   border-radius: 7px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 10px white;
   margin-top: -48px;
 }
 .container .registration{
@@ -68,11 +68,11 @@ body{
    outline: none;
  }
  .form input:focus{
-   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+   box-shadow: 0 1px 0 white;
  }
 .form a{
   font-size: 16px;
-  color: #009579;
+  color: #110095;
   text-decoration: none;
 }
 .form a:hover{
@@ -80,7 +80,7 @@ body{
 }
 button{
   color: #fff;
-  background: rgb(5, 61, 5);
+  background: blue;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -94,7 +94,7 @@ button{
   margin-left: 90px;
 }
 button:hover{
-  background: rgb(5, 61, 5);
+  background: rgb(187, 204, 237);
   font-size: 1.3rem;
 
 }
@@ -102,19 +102,27 @@ button:hover{
   font-size: 17px;
   text-align: center;
 }
-.signup label{
-  color: #009579;
-  cursor: pointer;
-}
+
 .signup label:hover{
   text-decoration: underline;
 }
 
 
+.full-page
+{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+
+
 
      </style>
  </head>
- <body>
+ <body >
 
        <div class="container">
          <input type="checkbox" id="check">
