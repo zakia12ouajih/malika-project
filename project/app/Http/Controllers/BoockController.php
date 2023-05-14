@@ -42,6 +42,7 @@ class BoockController extends Controller
         return redirect()->Route("aff");
     }
 
+
     /**
      * Show the form for creating a new resource.
      */

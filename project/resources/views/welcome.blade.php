@@ -34,7 +34,7 @@
                                 
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="/">Home</a>
+                                    <a class="nav-link text-white"  href="/">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     @if (Route::has('login'))
@@ -209,7 +209,7 @@
                         <a href="#">0542167896</a>
                     </div>
                     
-                    <div class="col-6 footerLink">
+                    <div class="ih">
                         <a  class="nav-link" href="http://www.twitter.ma"><i class="fa fa-twitter"></i> twitter </a>
                         <a  class="nav-link" href="http://www.facebook.ma"><i class="fa fa-facebook"> </i>facebook</a>
                         <a  class="nav-link" href="http://www.instagram.ma"><i class="fa fa-instagram"> </i>instagram</a>

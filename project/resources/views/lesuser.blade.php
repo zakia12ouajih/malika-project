@@ -95,15 +95,21 @@
             <td>{{ $s->email }}</td>
             <td>{{ $s->password }}</td>
             <td><a href="/admin/edit{{ $s->id }}">
-                <button class='btn btn-primary'>modifier
-                </button>
+                <button class='btn btn-primary'>modifier </button>
             </a></td>
-            <td><button class="btn btn-danger">supprimer</button></td>
+            <td>
+              <form class="z1"action="{{route('test.supprimer',['id'=>$s->id])}}"methode="POST"
+                onsubmit="return confirm('vous etes sur que vous vouler supprimer')">
+                @csrf
+                @method("DELETE")
+              <button  type="submit"class="btn btn-danger">supprimer</button></td>
+              </form>
             {{-- <td>
                 <a href="{{ url('admin/d', $s->id)}}"><button class="btn btn-primary">Modifier</button></a>
             </td>
             <tr><button class="btn btn-danger">supprimer</button></tr>
-          </tr> --}}
+               </tr> --}}
+        </tr>
         </tbody>
         
         @endforeach
