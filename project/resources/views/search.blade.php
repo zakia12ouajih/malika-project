@@ -91,8 +91,9 @@
                             <input class="form-control  " name="search_name"  type="text" placeholder="Search here...">
                             <button class="btn btn-outline-success " type="submit">Search</button>
                         </form>
+                        
                     </div>
-                    @foreach ($cr as $s )
+                    @foreach ($c as $s )
                     <div class="col-3  mb-2">
                         <div class="card text-start">
                             {{-- <a href="{{route('showimage2',['id'=>$s->id])}}"><img style="width: 300px; height: 350px; object-fit: cover;" class="img-card-top img-fluid" src="{{asset("image/".$s->image)}}" alt=""></a> --}}

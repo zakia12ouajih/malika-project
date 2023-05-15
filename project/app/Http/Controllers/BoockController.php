@@ -13,6 +13,7 @@ class BoockController extends Controller
     /**
      * Display a listing of the resource.
      */
+    
     public function index()
     {
         $role = Auth::user()->role;
@@ -20,6 +21,11 @@ class BoockController extends Controller
         if ($role == 0) {
             return view("welcome2",compact('cr'));
         }
+    }
+    public function firstFunction()
+    {
+        $cr = boock::all();
+        return view("welcome", compact('cr'));
     }
     public function welcome()
     {
@@ -127,12 +133,11 @@ class BoockController extends Controller
             "type"=>$request->t,
             "date-creat"=>$request->d,
         ]);
-        return redirect()->route('create');
+        return redirect()->back();
 
     }
     public function search(Request $request)
     {
-        $get_name =$request->search_name;
         // $cr = Computer::where('divition','LIKE' ,'%'.$get_name.'%')->get();
 
         // $get_name =$request->search_name;
@@ -152,11 +157,12 @@ class BoockController extends Controller
 
         $cr=boock::all();
         $get_name = $request->search_name;  
-        $c =boock::where('nom','LIKE' ,'%'.$get_name.'%')
-        ->orwhere('radmk','LIKE' ,'%'.$get_name.'%')
-        ->orwhere('societe','LIKE' ,'%'.$get_name.'%')
-        ->get();  
+        $c =boock::where('nom','LIKE' ,'%'.$get_name.'%')->get();
+        // ->orwhere('radmk','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('societe','LIKE' ,'%'.$get_name.'%')
+        // ->get();  
         return view("search",compact(['cr','c']));
+        // return $c;
     } 
     public function update(Request $request, boock $boock)
     {

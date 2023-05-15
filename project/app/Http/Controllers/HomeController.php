@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $role = Auth::user()->role;
         $cr=boock::all();
-        if ($role == 1) {
+        if ($role == 0) {
             return view('welcome2',compact('cr'));
         }
     }

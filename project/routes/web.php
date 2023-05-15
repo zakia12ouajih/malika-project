@@ -24,9 +24,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/se', function () {
-    return view('service');
-});
+Route::controller(BoockController::class)->group(
+    function () {
+        Route::get('/', 'firstFunction');
+    });
+// Route::get('/se', function () {
+//     return view('service');
+// });
 
 Auth::routes();
 
@@ -42,27 +46,29 @@ Route::prefix('admin')->middleware('auth')->group(function(){
         Route::get('/afficherUsers','afficher')->name('users');
         Route::get('/edit{id}', 'edit');
         Route::put('/modiUser/{id}', 'modifier');
+        Route::get('/search','search');
+        Route::get('/se','service')->name("ser");
     });
     
     // Route::get('/se',[BoockController::class,'service'])->name("ser");
     
     
-    Route::get('/t',[BoockController::class,'afficher'])->name("aff");
-    Route::get('d/{id}',[BoockController::class,'edit']);
-    Route::put('m/{id}',[BoockController::class,'modifier'])->name("mod");
-    Route::delete('s/{id}',[BoockController::class,'supprimer'])->name("test.supprimer");
+    // Route::get('/t',[BoockController::class,'afficher'])->name("aff");
+    // Route::get('d/{id}',[BoockController::class,'edit']);
+    // Route::put('m/{id}',[BoockController::class,'modifier'])->name("mod");
+    // Route::delete('s/{id}',[BoockController::class,'supprimer'])->name("test.supprimer");
 
 });
 
-Route::get('/indexx', [BoockController::class, 'indexx']);
-Route::get('/search',[BoockController::class,'search'])->name("search");
-Route::get('/din', [BoockController::class, 'din']);
-Route::get('/fronci', [BoockController::class, 'fronci']);
-Route::get('/roman', [BoockController::class, 'roman']);
-Route::get('/show', [BoockController::class, 'show']);
-Route::get('/nafs', [BoockController::class, 'nafs']);
-// Route::get('/', [BoockController::class, 'welcome']);
-Route::get('/save',[BoockController::class,'save'])->name("save");
-Route::get('/jj', [BoockController::class,'welcome']);
+// Route::get('/indexx', [BoockController::class, 'indexx']);
+// Route::get('/search',[BoockController::class,'search'])->name("search");
+// Route::get('/din', [BoockController::class, 'din']);
+// Route::get('/fronci', [BoockController::class, 'fronci']);
+// Route::get('/roman', [BoockController::class, 'roman']);
+// Route::get('/show', [BoockController::class, 'show']);
+// Route::get('/nafs', [BoockController::class, 'nafs']);
+// // Route::get('/', [BoockController::class, 'welcome']);
+// Route::get('/save',[BoockController::class,'save'])->name("save");
+// Route::get('/jj', [BoockController::class,'welcome']);
 
 // Route::resource('url1',BoockController::class);

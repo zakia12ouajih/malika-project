@@ -74,8 +74,8 @@
             </div>
             <div class="container">
                 <div class=" mt-5 mb-5 d-flex justify-content-center align-items-center">
-                    <form class="col-7  d-flex justify-content-center align-items-center my-2" action='{{ url('/search') }}' method="GET">
-                        <input class="form-control  " name="search_name"  type="text" id="search_name" placeholder="Search">
+                    <form class="col-7  d-flex justify-content-center align-items-center my-2" action='{{ url('/admin/search') }}' accept-charset="utf-8" method="GET">
+                        <input class="form-control" name="search_name"  type="text" id="search_name" placeholder="Search">
                         <button class="btn btn-outline-success " type="submit">Search</button>
                     </form>
                 </div>
