@@ -28,7 +28,7 @@
           <div class="collapse  navbar-collapse" id="collapsibleNavId">
               <ul class="nav navbar-nav w-100 justify-content-end me-auto mt-2 mt-lg-0">
                   <li class="nav-item">
-                      <a class="nav-link text-white" href="/home">HOME</a>
+                      <a class="nav-link text-white" href="/admin/homeAdmin">HOME</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link text-white" href="/admin/aff">Services</a>
@@ -81,14 +81,12 @@
             </tr>
           </thead>
           <tbody>
-              <tr>
-                <td>Les roman</td>
-            </tr>
-            <tr><td>Arabe</td></tr>
-            <tr><td >Arabe</td></tr>
-            <tr><td>Arabe</td></tr>
-            <tr><td >Arabe</td></tr>
-            <tr><td>Arabe</td></tr>
+            <tr><td><a href="/fronci">Francais</a></td></tr>
+            <tr><td ><a href="nafs">Psychologie</a></td></tr>
+            <tr><td><a href="din">La roligion islamique</a></td></tr>
+            <tr><td ><a href="indexx">Arabe</a></td></tr>
+            <tr><td><a href="show">Politique</a></td></tr>
+            <tr><td><a href="roman">Les romant</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -121,7 +119,7 @@
                     <div class="mb-2  container d-flex align-items-center justify-content-center row">
                       <label for="inputName" class="col-3 col-form-label">image:</label>
                       <div class="col-8">
-                        <input type="file" class="form-control form-control-sm" name="i" id="inputName" placeholder="image">
+                        <input type="text" class="form-control form-control-sm" name="i" id="inputName" placeholder="image">
                       </div>
                     </div>
                     <div class="mb-2  container d-flex align-items-center justify-content-center row">
@@ -158,7 +156,7 @@
                     <div class="mb-2  container d-flex align-items-center justify-content-center row">
                       <label for="inputName" class="col-3 col-form-label">Les page:</label>
                       <div class="col-8">
-                        <input type="number" class="form-control form-control-sm" name="p" id="inputName" placeholder="page">
+                        <input type="text" class="form-control form-control-sm" name="p" id="inputName" placeholder="page">
                       </div>
                     </div>
                   

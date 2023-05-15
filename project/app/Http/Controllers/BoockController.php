@@ -16,9 +16,62 @@ class BoockController extends Controller
     public function index()
     {
         $role = Auth::user()->role;
+        $cr=boock::all();
         if ($role == 0) {
-            return view("welcome2");
-        } 
+            return view("welcome2",compact('cr'));
+        }
+    }
+    public function welcome()
+    {
+        $m= boock::find(1);
+        return view('show',compact("m"));
+    }
+    
+    public function indexx()
+    {
+        $cr=boock::all();
+        return view("arabe",compact("cr"));
+        
+    }
+    public function roman()
+    {
+        $cr=boock::all();
+        return view("lasroman",compact("cr"));
+        
+    }
+    public function fronci()
+    {
+        $cr=boock::all();
+        return view("francais",compact("cr"));
+        
+    }
+    public function show()
+    {
+        $cr=boock::all();
+        return view("siyasa",compact("cr"));
+        
+    }
+    public function din()
+    {
+        $cr=boock::all();
+        return view("din",compact("cr"));
+        
+    }
+    public function nafs()
+    {
+        $cr=boock::all();
+        return view("3limnafs",compact("cr"));
+        
+    }
+    public function save()
+    {
+        
+            return view("save");
+        
+    }
+    public function service()
+    {  
+        return view("service");
         
     }
     public function afficher(){
@@ -56,12 +109,13 @@ class BoockController extends Controller
      */
     public function store(Request $request)
     {
-        $n=$request->pa->getClientOriginalExtension();
-        $mn=time().".".$n;
-        $path="image";
-        $request->pa->move($path,$mn);
+        // $n=$request->file('i')->getClientOriginalExtension();
+        // $n=$request->pa->getClientOriginalExtension();
+        // $mn=time().".".$n;
+        // $path="image";
+        // $request->pa->move($path,$mn);
         boock::create([
-            "image"=>$mn,
+            "image"=>$request->i,
             "nom"=>$request->n,
             "class"=>$request->c,
             "longage"=>$request->l,
@@ -73,32 +127,41 @@ class BoockController extends Controller
             "type"=>$request->t,
             "date-creat"=>$request->d,
         ]);
-        // return redirect()->route('url.index');
+        return redirect()->route('create');
 
     }
+    public function search(Request $request)
+    {
+        $get_name =$request->search_name;
+        // $cr = Computer::where('divition','LIKE' ,'%'.$get_name.'%')->get();
 
-    /**
-     * Display the specified resource.
-     */
-    
+        // $get_name =$request->search_name;
+        // $cr = Computer::where('nom','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('prenom','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('email','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('mobil1','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('mobil2','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('telephone1','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('telephone2','LIKE' ,'%'.$get_name.'%')
+        // ->orwhere('fonction','LIKE' ,'%'.$get_name.'%')
+        // ->get();
+        // $cr = DB:: table("computers")->get();
+        // $m =  DB:: table("nom_models")->get();
+        // return view("search",compact(["cr","m"]));
 
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    
-
-    /**
-     * Update the specified resource in storage.
-     */
+        $cr=boock::all();
+        $get_name = $request->search_name;  
+        $c =boock::where('nom','LIKE' ,'%'.$get_name.'%')
+        ->orwhere('radmk','LIKE' ,'%'.$get_name.'%')
+        ->orwhere('societe','LIKE' ,'%'.$get_name.'%')
+        ->get();  
+        return view("search",compact(['cr','c']));
+    } 
     public function update(Request $request, boock $boock)
     {
-        //
+      
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(boock $boock,$id)
     {
         DB::table('users')->where('id', $id)->delete();

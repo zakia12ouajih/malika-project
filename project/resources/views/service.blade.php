@@ -8,20 +8,15 @@
   <title>Document</title>
   <!-- Button trigger modal -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
--->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-
-
-
-
-
 </head>
-<body class="body">
+<body class="body"></body>
+<div class="">
   <nav class="navbar navbar-expand-sm navbar-light bg-dark">
       <div class="container">
           <a class="navbar-brand text-white" href="#"><img src="images/zozor_logo.png"  width="50px" height="50px" alt="#">ZH</a>
@@ -33,7 +28,7 @@
           <div class="collapse  navbar-collapse" id="collapsibleNavId">
               <ul class="nav navbar-nav w-100 justify-content-end me-auto mt-2 mt-lg-0">
                   <li class="nav-item">
-                      <a class="nav-link text-white" href="/admin/homeAdmin">HOME</a>
+                      <a class="nav-link text-white" href="/home">HOME</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link text-white" href="/admin/aff">Services</a>
@@ -67,54 +62,31 @@
           </div>
       </div>
   </nav>
-<div  >
-  
 
-  </div>
-<article>
-  
-    
-    <div  class="container">
-    <table class="table table-bordered text-center table-hover mt-5">
+ <!-- Button trigger modal -->
+<article class="container">
+  <div>
+    <div class="mt-4">
+      <div class="table-responsive">
+        <table class="table table-bordered  table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th>Les class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="/fronci">Francais</a></td></tr>
+            <tr><td ><a href="nafs">Psychologie</a></td></tr>
+            <tr><td><a href="din">La roligion islamique</a></td></tr>
+            <tr><td ><a href="indexx">Arabe</a></td></tr>
+            <tr><td><a href="show">Politique</a></td></tr>
+            <tr><td><a href="roman">Les romant</a></td></tr>
+          </tbody>
+        </table>
+      </div>
       
-        <thead>
-          <tr class="table-primary">
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Password</th>
-            <th scope="col">modifier</th>
-            <th scope="col">supprimer</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach ($cr as $s)
-          <tr>
-            <td>{{ $s->id }}</td>
-            <td>{{ $s->name }}</td>
-            <td>{{ $s->email }}</td>
-            <td>{{ $s->password }}</td>
-            <td><a href="/admin/edit{{ $s->id }}">
-                <button class='btn btn-primary'>modifier </button>
-            </a></td>
-            <td>
-              <form class="z1"action="{{route('test.supprimer',['id'=>$s->id])}}"methode="POST"
-                onsubmit="return confirm('vous etes sur que vous vouler supprimer')">
-                @csrf
-                @method("DELETE")
-              <button  type="submit"class="btn btn-danger">supprimer</button></td>
-              </form>
-            {{-- <td>
-                <a href="{{ url('admin/d', $s->id)}}"><button class="btn btn-primary">Modifier</button></a>
-            </td>
-            <tr><button class="btn btn-danger">supprimer</button></tr>
-               </tr> --}}
-        </tr>
-        </tbody>
-        
-        @endforeach
-      </table>
     </div>
+  </div>
 </article>
 </body>
 </html>

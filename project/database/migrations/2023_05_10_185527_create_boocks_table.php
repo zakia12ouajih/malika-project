@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('boocks', function (Blueprint $table) {
             $table->id();
-            $table->string("image");
-            $table->string("nom");
-            $table->string("class");
-            $table->string("longage");
-            $table->string("societe");
-            $table->string("radmk");
-            $table->date("date-isdar");
-            $table->string("page");
-            $table->string("volum");
-            $table->string("type");
-            $table->date("date-creat");
+            $table->string("image")->nullable();
+            $table->string("nom")->nullable();
+            $table->string("class")->nullable();
+            $table->string("longage")->nullable();
+            $table->string("societe")->nullable();
+            $table->string("radmk")->nullable();
+            $table->date("date-isdar")->nullable();
+            $table->string("page")->nullable();
+            $table->string("volum")->nullable();
+            $table->string("type")->nullable();
+            $table->date("date-creat")->nullable();
 
             $table->timestamps();
         });

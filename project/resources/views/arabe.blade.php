@@ -29,37 +29,27 @@
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        
                         <div class="collapse  navbar-collapse" id="collapsibleNavId">
                             <ul class="nav navbar-nav w-100 justify-content-end me-auto mt-2 mt-lg-0">
+                                
+                                
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="/home">HOME</a>
+                                    <a class="nav-link text-white"  href="/">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="/admin/aff">Services</a>
+                                    <a class="nav-link text-white" href="/se">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    @guest
-                                        @if (Route::has('login'))
-                                        <h5>    
-                                            <a class="nav-link " href="{{ route('login') }}"></a>
-                                        </h5>
+                                    @if (Route::has('login'))
+ 
+                                    <a class="nav-link text-white" href="{{ route('login') }}">Log in</a>
+                                    @endif
+                                </li>
+                                <li class="nav-item">
+                                        @if (Route::has('register'))
+                                            <a class="nav-link text-white" href="{{ route('register') }}" >Register</a>
                                         @endif
-                                    @else
-                                        <li class="nav-item ">
-                                        <div id="demox" >
-                                            
-                                                <h5>
-                                                    <a class="nav-link text-white text-center" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                        logout
-                                                    </a>
-                                                </h5>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class=" d-none">
-                                                @csrf
-                                            </form>
-                                        </div>
-                                        </li>
-                                    @endguest 
+                                    
                                     
                                 </li>
                             </ul>
@@ -74,8 +64,8 @@
             </div>
             <div class="container">
                 <div class=" mt-5 mb-5 d-flex justify-content-center align-items-center">
-                    <form class="col-7  d-flex justify-content-center align-items-center my-2" action='{{ url('/search') }}' method="GET">
-                        <input class="form-control  " name="search_name"  type="text" id="search_name" placeholder="Search">
+                    <form class="col-7  d-flex justify-content-center align-items-center my-2" action='{{ url('/search') }}' method="get">
+                        <input class="form-control  " name="search_name"  type="text" id="search" placeholder="Search">
                         <button class="btn btn-outline-success " type="submit">Search</button>
                     </form>
                 </div>
@@ -87,19 +77,25 @@
             <div class="container">
                 <div class="row">
                     @foreach ($cr as $s )
+                    @if ($s->radmk== 'arabe')
                     <div class="col-3  mb-2">
                         <div class="card text-start">
-                            {{-- <a href="{{route('showimage2',['id'=>$s->id])}}"><img style="width: 300px; height: 350px; object-fit: cover;" class="img-card-top img-fluid" src="{{asset("image/".$s->image)}}" alt=""></a> --}}
+                            <a href="{{route("showimage2",['id'=>$s->id])}}"><img class="img-card-top img-fluid" style="width: 300px; height: 350px; object-fit: cover;"  src="{{asset('image/'.$s->image)}}"></a>
                             <div class="card-body">
                                 <h4 class="card-title">{{$s->nom}}</h4>
                                 <p>{{$s->radmk}}</p>
-                                <p><a href="/jj">Les information</a></p>
-                            </div>  
-                        </div>              
+                                <p class="card-text">Les informations</p>
+                            </div>
+                        </div>
                     </div>
+                    @endif
                     @endforeach
                 </div>
             </div>
+        
+        
+            
+        
         <footer >
             <div class="container">
 
@@ -110,7 +106,7 @@
                         <a href="#">0542167896</a>
                     </div>
                     
-                    <div class="col-6 footerLink">
+                    <div class="ih">
                         <a  class="nav-link" href="http://www.twitter.ma"><i class="fa fa-twitter"></i> twitter </a>
                         <a  class="nav-link" href="http://www.facebook.ma"><i class="fa fa-facebook"> </i>facebook</a>
                         <a  class="nav-link" href="http://www.instagram.ma"><i class="fa fa-instagram"> </i>instagram</a>

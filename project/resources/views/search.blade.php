@@ -73,12 +73,12 @@
                 </div>
             </div>
             <div class="container">
-                <div class=" mt-5 mb-5 d-flex justify-content-center align-items-center">
+                {{-- <div class=" mt-5 mb-5 d-flex justify-content-center align-items-center">
                     <form class="col-7  d-flex justify-content-center align-items-center my-2" action='{{ url('/search') }}' method="GET">
                         <input class="form-control  " name="search_name"  type="text" id="search_name" placeholder="Search">
                         <button class="btn btn-outline-success " type="submit">Search</button>
                     </form>
-                </div>
+                </div> --}}
                 <div>
                     <h2 class="a">Unique place for Unique reading </h2>
                     <p class="B">Recusandae voluptates atque ratione accusantium quae,  dolorum provident et dignissimos deleniti impedit exercitationem mollitia asperiores. Architecto deleniti tenetur harum possimus odio consequuntur, dicta, perspiciatis quisquam voluptas maiores nemo nam. Voluptate non labore ratione corporis et neque, praesentium aliquid maiores maxime repellat beatae earum! Id vel maiores totam eum, adipisci aut veniam omnis quas harum, minima, sunt quae excepturi nulla!</p>
@@ -86,6 +86,12 @@
             </div>
             <div class="container">
                 <div class="row">
+                    <div class=" mt-5 mb-5 d-flex justify-content-center align-items-center">
+                        <form class="col-7  d-flex justify-content-center align-items-center my-2" action='{{ url('/search') }}' method="GET">
+                            <input class="form-control  " name="search_name"  type="text" placeholder="Search here...">
+                            <button class="btn btn-outline-success " type="submit">Search</button>
+                        </form>
+                    </div>
                     @foreach ($cr as $s )
                     <div class="col-3  mb-2">
                         <div class="card text-start">
